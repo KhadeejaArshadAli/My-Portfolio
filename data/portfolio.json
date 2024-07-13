@@ -1,0 +1,25 @@
+{
+    "portfolio":[
+        {
+           "cover": "/portfolio/1/one.png",
+           "title":"Landing Page" ,
+           "description":  "HTML5 and CSS3.",
+           "url":"https://chai-website.netlify.app/"
+
+        },
+        {
+            "cover": "/portfolio/1/two.png",
+            "title":"Travel Website" ,
+            "description":  "HTML5, CSS3,JS,PHP",
+            "url":"https://evergreentravels.netlify.app/"
+ 
+         },
+         {
+            "cover": "/portfolio/1/three.png",
+            "title":"Furniture Store" ,
+            "description":  "HTML5,CSS3,JS,PHP",
+            "url":"https://enchantee.netlify.app/"
+ 
+         }
+    ]
+}
