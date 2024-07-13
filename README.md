@@ -1,2 +1,2 @@
 # Portolio
-https://khadeejaportfolio.netlify.app/
+https://my-portfolio-khadeeja.netlify.app/
