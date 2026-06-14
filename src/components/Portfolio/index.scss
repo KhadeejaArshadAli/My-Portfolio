@@ -1,113 +1,157 @@
 .portfolio-page {
-    padding-left: 100px;
-    padding-right: 50px;
-    width: calc(100% - 150px);
-    position: initial;
-    height: 100%;
-    overflow: auto;
+  padding-left: 100px;
+  padding-right: 50px;
+  width: calc(100% - 150px);
+  position: initial;
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 100px;
+
+  h1.page-title {
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+
+  .portfolio-intro {
+    margin-left: 100px;
+    max-width: 600px;
+    color: #8d8d8d;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  .case-studies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-left: 100px;
+    margin-right: 50px;
+  }
+
+  .case-study-card {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 10px;
+    padding: 28px;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: rgba(255, 215, 0, 0.5);
+    }
+
+    .case-study-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+
+      h3 {
+        color: #ffd700;
+        font-family: 'Coolvetica', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      .nda-badge {
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #8d8d8d;
+        border: 1px solid #8d8d8d;
+        padding: 2px 8px;
+        border-radius: 4px;
+      }
+    }
+
+    .case-study-tagline {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0 0 16px;
+    }
+
+    .case-study-highlights {
+      padding-left: 18px;
+      margin: 0 0 16px;
+
+      li {
+        color: #fff;
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 6px;
+      }
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+
+      .tech-tag {
+        font-size: 11px;
+        letter-spacing: 1px;
+        color: #ffd700;
+        background: rgba(255, 215, 0, 0.1);
+        border: 1px solid rgba(255, 215, 0, 0.3);
+        padding: 4px 10px;
+        border-radius: 4px;
+      }
+    }
+
+    .store-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      .store-badge {
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #fff;
+        background: #115173;
+        border: 1px solid #ffd700;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #ffd700;
+          color: #333;
+        }
+      }
+
+      .store-badge-request {
+        border-style: dashed;
+        color: #ffd700;
+        background: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .portfolio-page {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 
     h1.page-title {
-        margin-left: 100px;
-        margin-top: 100px;
+      margin-left: 20px;
+      margin-top: 20px;
     }
 
-    .images-container {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        padding-bottom: 100px;
+    .portfolio-intro {
+      margin-left: 20px;
     }
 
-    .image-box {
-        position: relative;
-        flex: 1 1 20%;
-        height: 400px;
-        overflow: hidden;
-        border-radius: 10px;
-        max-width: calc(25% - 10px);
-
-        .portfolio-image {
-            position: absolute;
-            z-index: 2;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .content {
-            position: absolute;
-            width: 100%;
-            z-index: 3;
-            padding: 10px 20px;
-            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-            background: linear-gradient(
-                180deg,
-                rgba(0, 0, 0, 0.2) 0,
-                rgba(0, 0, 0, 1)
-            );
-            bottom: -70px;
-        }
-
-        .title {
-            margin-bottom: 0;
-            margin-top: 0;
-            color: #fff;
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 24px;
-        }
-
-        .description {
-            font-size: 14px;
-            margin-bottom: 5px;
-            color: #fff;
-            font-weight: 700;
-        }
-
-        .btn {
-            margin-top: 30px;
-            margin-bottom: 10px;
-            padding: 0 23px;
-            height: 40px;
-            line-height: 34px;
-            border: 2px solid #ffd700;
-            border-radius: 4px;
-            font-size: 14px;
-            color: #fff;
-            background: transparent;
-            text-transform: uppercase;
-            font-weight: 700;
-            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            background: #ffd700;
-        }
-
-        &:after {
-            content: "";
-            background: linear-gradient(180deg, #ffd700, #000);
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-            opacity: 0;
-        }
-
-        &:hover:after {
-            opacity: 0.85;
-        }
-
-        &:hover .content {
-            bottom: 0;
-            background: transparent;
-        }
+    .case-studies {
+      margin-left: 0;
+      margin-right: 0;
+      grid-template-columns: 1fr;
     }
+  }
 }

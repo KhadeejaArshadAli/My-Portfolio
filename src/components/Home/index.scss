@@ -40,14 +40,34 @@
   
   }
   h2{
-    color: #8d8d8d8d;
+    color: #8d8d8d;
     margin-top: 20px;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 13px;
     font-family: sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    max-width: 480px;
     animation: fadeIn 1s 1.8s backwards;
   }
+
+  .cta-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    animation: fadeIn 1s 1.8s backwards;
+  }
+
+  .trust-strip {
+    color: #8d8d8d;
+    font-size: 11px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    animation: fadeIn 1s 2s backwards;
+  }
+
   .flat-button{
     color: #ffd700;
     font-size: 13px;
@@ -57,14 +77,38 @@
     text-decoration: none;
     padding: 10px 18px;
     border: 1px solid #ffd700;
-    margin-top: 25px;
-    float: left;
-    animation: fadeIn 1s 1.8s backwards;
     white-space: nowrap;
+    display: inline-block;
 
     &:hover{
       background: #ffd700;
       color: #333;
+    }
+  }
+
+  .flat-button-secondary {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffd700;
+      border-color: #ffd700;
+    }
+  }
+
+  .flat-button-cv {
+    background: transparent;
+    color: #8d8d8d;
+    border-color: rgba(255, 255, 255, 0.25);
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    &:hover {
+      color: #ffd700;
+      border-color: #ffd700;
+      background: transparent;
     }
   }
 }
@@ -83,31 +127,16 @@
       padding: 10px;
       box-sizing: border-box;
     }
-    .home-page
-    .flat-button{
-      float: none;
-      display: block;
-      margin: 20px auto 0 auto;
-      width: 125px;
-    }
-    .logo-container{
-      position: relative;
-      width: 300px;
-      height: auto;
-      top: 350px;
-      right: 0;
-      box-sizing: border-box;
-      margin: auto;
-      left: -50px;
+    .cta-group {
+      justify-content: center;
     }
 
-     .logo-container svg{
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: 0;
-        margin: auto;
-      }
+    .flat-button {
+      text-align: center;
+    }
+
+    .stage-cube-cont {
+      margin-top: 20px;
     }
   }
+}
